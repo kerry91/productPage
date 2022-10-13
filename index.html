@@ -1,129 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<script src="https://kit.fontawesome.com/ff9a0acac1.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-<link rel="stylesheet" href="style.css">
-  <title>E-commerce product page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ff9a0acac1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>E-commerce product page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item brand">
+            <img src="images/logo.svg" width="112" height="28" />
+          </a>
 
-</head>
-<body>
-  <div class="container">
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item">
-        <img src="images/logo.svg" width="112" height="28">
-      </a>
-
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item">
-          Collections
-        </a>
-
-        <a class="navbar-item">
-          Men
-        </a>
-
-        <a class="navbar-item">
-          Women
-        </a>
-
-        <a class="navbar-item">
-          About
-        </a>
-
-        <a class="navbar-item">
-          Contact
-        </a>
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
         </div>
-      </div>
 
-      <div class="navbar-end">
-            <a class="navbar-item">
-              <img src="images/icon-cart.svg" width="20" height="30">
-            </a>
-            <a class="navbar-item">
-              <img src="images/image-avatar.png" width="30" height="50">
-            </a>
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item"> Collections </a>
+
+            <a class="navbar-item"> Men </a>
+
+            <a class="navbar-item"> Women </a>
+
+            <a class="navbar-item"> About </a>
+
+            <a class="navbar-item"> Contact </a>
           </div>
         </div>
+
+        <div class="navbar-end">
+          <div class="cart-dropdown">
+            <div class="dropdown is-hoverable">
+              <div class="dropdown-trigger">
+                <button
+                  class="cart-button"
+                  aria-haspopup="true"
+                  aria-controls="dropdown-menu4"
+                >
+                <img src="images/icon-cart.svg" width="20" height="30" />
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                <div class="dropdown-content">
+                  <div class="dropdown-item">
+                    <p class="cart-title">
+                      Cart
+                    </p>
+                  </div>
+                  <hr class="dropdown-divider">
+                  <div class="cart-content">
+                      <p>Your cart is empty</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="avatar-container">
+            <img class="avatar" src="images/image-avatar.png" width="35" height="35" />
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="main container">
+      <div class="columns is-mobile">
+        <div class="left column">
+          <!-- Full-width images with number text -->
+          <div class="mySlides" id="myBtn">
+            <img class="demo-main" src="images/image-product-1.jpg" />
+          </div>
+
+          <div class="mySlides" id="myBtn">
+            <img class="demo-main" src="images/image-product-2.jpg" />
+          </div>
+
+          <div class="mySlides" id="myBtn">
+            <img class="demo-main" src="images/image-product-3.jpg" />
+          </div>
+
+          <div class="mySlides" id="myBtn">
+            <img class="demo-main" src="images/image-product-4.jpg" />
+          </div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          <!-- Thumbnail images -->
+          <div class="row">
+            <div class="demo-column">
+              <img
+                class="demo cursor"
+                src="images/image-product-1-thumbnail.jpg"
+                onclick="currentSlide(1)"
+                alt="The Woods"
+              />
+            </div>
+            <div class="demo-column">
+              <img
+                class="demo cursor"
+                src="images/image-product-2-thumbnail.jpg"
+                onclick="currentSlide(2)"
+                alt="Cinque Terre"
+              />
+            </div>
+            <div class="demo-column">
+              <img
+                class="demo cursor"
+                src="images/image-product-3-thumbnail.jpg"
+                onclick="currentSlide(3)"
+                alt="Mountains and fjords"
+              />
+            </div>
+            <div class="demo-column">
+              <img
+                class="demo cursor"
+                src="images/image-product-4-thumbnail.jpg"
+                onclick="currentSlide(4)"
+                alt="Northern Lights"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="right column">
+          <p class="sc">SNEAKER COMPANY</p>
+          <h2>Fall Limited Edition Sneakers</h2>
+          <p class="description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <span class="d-price">$125.00<span class="discount">50%</span></span>
+          <p class="o-price">$250.00</p>
+
+          <span class="count-cart-container"
+            ><span class="count-container"
+              ><button class="minus" id="minus"><i class="fa-solid fa-minus"></i></button
+              ><span id="count-result" class="count"></span>
+              <button class="plus" id="plus"><i class="fa-solid fa-plus"></i></button
+            ></span>
+            <button class="add-cart">
+              <img
+                class="btn-cart"
+                src="images/icon-cart.svg"
+                alt="cart"
+                height="10"
+                width="10"
+              />Add to cart
+            </button></span
+          >
+        </div>
+      </div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+<p class="close"><i class="fa-solid fa-xmark"></i></p>
+  <!-- Modal content -->
+  <div class="modal-content">
+
+    <!-- Full-width images with number text -->
+    <div class="modelSlides">
+      <img class="demo-main" src="images/image-product-1.jpg" />
+    </div>
+
+    <div class="modelSlides">
+      <img class="demo-main" src="images/image-product-2.jpg" />
+    </div>
+
+    <div class="modelSlides">
+      <img class="demo-main" src="images/image-product-3.jpg" />
+    </div>
+
+    <div class="modelSlides">
+      <img class="demo-main" src="images/image-product-4.jpg" />
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="model-prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="model-next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Thumbnail images -->
+    <div class="row">
+      <div class="demo-column">
+        <img
+          class="demo cursor"
+          src="images/image-product-1-thumbnail.jpg"
+          onclick="currentSlide(1)"
+          alt="The Woods"
+        />
+      </div>
+      <div class="demo-column">
+        <img
+          class="demo cursor"
+          src="images/image-product-2-thumbnail.jpg"
+          onclick="currentSlide(2)"
+          alt="Cinque Terre"
+        />
+      </div>
+      <div class="demo-column">
+        <img
+          class="demo cursor"
+          src="images/image-product-3-thumbnail.jpg"
+          onclick="currentSlide(3)"
+          alt="Mountains and fjords"
+        />
+      </div>
+      <div class="demo-column">
+        <img
+          class="demo cursor"
+          src="images/image-product-4-thumbnail.jpg"
+          onclick="currentSlide(4)"
+          alt="Northern Lights"
+        />
       </div>
     </div>
-  </nav>
+  </div>
+
 </div>
-
-<div class="main container">
-<div class="columns is-mobile">
-  <div class="left column">
-    <!-- Full-width images with number text -->
-  <div class="mySlides">
-      <img class="demo-main" src="images/image-product-1.jpg" >
-  </div>
-
-  <div class="mySlides">
-      <img class="demo-main" src="images/image-product-2.jpg" >
-  </div>
-
-  <div class="mySlides">
-      <img class="demo-main" src="images/image-product-3.jpg" >
-  </div>
-
-  <div class="mySlides">
-      <img class="demo-main" src="images/image-product-4.jpg" >
-  </div>
-
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-
-  <!-- Thumbnail images -->
-  <div class="row">
-    <div class="demo-column">
-      <img class="demo cursor" src="images/image-product-1-thumbnail.jpg" onclick="currentSlide(1)" alt="The Woods">
     </div>
-    <div class="demo-column">
-      <img class="demo cursor" src="images/image-product-2-thumbnail.jpg" onclick="currentSlide(2)" alt="Cinque Terre">
-    </div>
-    <div class="demo-column">
-      <img class="demo cursor" src="images/image-product-3-thumbnail.jpg" onclick="currentSlide(3)" alt="Mountains and fjords">
-    </div>
-    <div class="demo-column">
-      <img class="demo cursor" src="images/image-product-4-thumbnail.jpg"  onclick="currentSlide(4)" alt="Northern Lights">
-    </div>
-  </div>
-</div>
-  <div class="right column">
-    <p class="sc">SNEAKER COMPANY</p>
-    <h2>Fall Limited Edition Sneakers</h2>
-    <p class="description">These low-profile sneakers are your perfect casual wear companion. Featuring a
-    durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-    <span class="d-price">$125.00<span class="discount">50%</span></span>
-    <p class="o-price">$250.00</p>
-
-    <span class="count-cart-container"><span class="count-container"><button class="minus"><i class="fa-solid fa-minus"></i></button><span id="count" class="count">0</span>
-    <button class="plus"><i class="fa-solid fa-plus"></i></button></span>
-    <button class="add-cart"><img class="btn-cart" src="images/icon-cart.svg" alt="cart" height="10" width="10"/>Add to cart</button></span>
-
-
-  </div>
-</div>
-</div>
-
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
