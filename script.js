@@ -1,3 +1,13 @@
+function responsiveMenu() {
+  var x = document.getElementById("myTopnav");
+  let right = document.getElementById("nav-right");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -82,7 +92,13 @@ function handleIncrement (){
 
 // Function to decrement count
 function handleDecrement(){
-  count--;
+  if(count === 0){
+    return false
+  }
+  else{
+    count--;
+  }
+
   totalCount.innerHTML = count;
 };
 

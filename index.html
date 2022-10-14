@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- displays site properly based on user's device -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,31 +22,22 @@
     <link rel="stylesheet" href="style.css" />
     <title>E-commerce product page</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
-    <div class="container">
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item brand">
-            <img src="images/logo.svg" width="112" height="28" />
-          </a>
-
-          <a
-            role="button"
-            class="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
+    <div class="nav-bar container">
+      <nav class="topnav" id="myTopnav">
+        <div class="nav-row">
+          <div class="nav-column nav-left">
+            <a id="brand" href="#home" class="active">
+              <img class="logo" src="images/logo.svg" width="112" height="28" />
+            </a>
+          </div>
+          <div class="nav-column nav-middle">
+            <a
+              href="javascript:void(0);"
+              class="icon"
+              onclick="responsiveMenu()"
+            ></a>
             <a class="navbar-item"> Collections </a>
 
             <a class="navbar-item"> Men </a>
@@ -57,10 +48,10 @@
 
             <a class="navbar-item"> Contact </a>
           </div>
-        </div>
-
-        <div class="navbar-end">
-          <div class="cart-dropdown">
+          <a href="javascript:void(0);" class="icon" onclick="responsiveMenu()">
+            <i class="fa fa-bars"></i>
+          </a>
+          <div class="nav-column nav-right" id="nav-right">
             <div class="dropdown is-hoverable">
               <div class="dropdown-trigger">
                 <button
@@ -68,34 +59,38 @@
                   aria-haspopup="true"
                   aria-controls="dropdown-menu4"
                 >
-                <img src="images/icon-cart.svg" width="20" height="30" />
+                  <img src="images/icon-cart.svg" width="20" height="30" />
                 </button>
               </div>
               <div class="dropdown-menu" id="dropdown-menu4" role="menu">
                 <div class="dropdown-content">
                   <div class="dropdown-item">
-                    <p class="cart-title">
-                      Cart
-                    </p>
+                    <p class="cart-title">Cart</p>
                   </div>
-                  <hr class="dropdown-divider">
+                  <hr class="dropdown-divider" />
                   <div class="cart-content">
-                      <p>Your cart is empty</p>
+                    <p>Your cart is empty</p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-            <div class="avatar-container">
-            <img class="avatar" src="images/image-avatar.png" width="35" height="35" />
+            <img
+              class="avatar"
+              src="images/image-avatar.png"
+              width="35"
+              height="35"
+            />
           </div>
         </div>
       </nav>
     </div>
 
     <div class="main container">
-      <div class="columns is-mobile">
-        <div class="left column">
+      <div class="columns is-desktop">
+        <div
+          class="left is-three-quarters-mobile is-full-tablet is-half-desktop is-half-widescreen is-half-fullhd"
+        >
+          <div class="mySlidesContainer">
           <!-- Full-width images with number text -->
           <div class="mySlides" id="myBtn">
             <img class="demo-main" src="images/image-product-1.jpg" />
@@ -153,7 +148,10 @@
             </div>
           </div>
         </div>
-        <div class="right column">
+      </div>
+        <div
+          class="right column is-three-quarters-mobile is-full-tablet is-half-desktop is-half-widescreen is-half-fullhd"
+        >
           <p class="sc">SNEAKER COMPANY</p>
           <h2>Fall Limited Edition Sneakers</h2>
           <p class="description">
@@ -164,12 +162,14 @@
           <span class="d-price">$125.00<span class="discount">50%</span></span>
           <p class="o-price">$250.00</p>
 
-          <span class="count-cart-container"
-            ><span class="count-container"
-              ><button class="minus" id="minus"><i class="fa-solid fa-minus"></i></button
-              ><span id="count-result" class="count"></span>
-              <button class="plus" id="plus"><i class="fa-solid fa-plus"></i></button
-            ></span>
+          <span class="count-cart-container">
+            <span class="count-container">
+              <button class="minus" id="minus">
+                <i class="fa-solid fa-minus"></i></button>
+                <span id="count-result" class="count"></span>
+              <button class="plus" id="plus">
+                <i class="fa-solid fa-plus"></i></button>
+              </span>
             <button class="add-cart">
               <img
                 class="btn-cart"
@@ -178,75 +178,74 @@
                 height="10"
                 width="10"
               />Add to cart
-            </button></span
-          >
+            </button>
+            </span>
         </div>
       </div>
-<!-- The Modal -->
-<div id="myModal" class="modal">
-<p class="close"><i class="fa-solid fa-xmark"></i></p>
-  <!-- Modal content -->
-  <div class="modal-content">
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <p class="close"><i class="fa-solid fa-xmark"></i></p>
+        <!-- Modal content -->
+        <div class="modal-content">
+          <!-- Full-width images with number text -->
+          <div class="model-slides-container">
+            <div class="modelSlides">
+              <img class="demo-main" src="images/image-product-1.jpg" />
+            </div>
 
-    <!-- Full-width images with number text -->
-    <div class="modelSlides">
-      <img class="demo-main" src="images/image-product-1.jpg" />
-    </div>
+            <div class="modelSlides">
+              <img class="demo-main" src="images/image-product-2.jpg" />
+            </div>
 
-    <div class="modelSlides">
-      <img class="demo-main" src="images/image-product-2.jpg" />
-    </div>
+            <div class="modelSlides">
+              <img class="demo-main" src="images/image-product-3.jpg" />
+            </div>
 
-    <div class="modelSlides">
-      <img class="demo-main" src="images/image-product-3.jpg" />
-    </div>
+            <div class="modelSlides">
+              <img class="demo-main" src="images/image-product-4.jpg" />
+            </div>
 
-    <div class="modelSlides">
-      <img class="demo-main" src="images/image-product-4.jpg" />
-    </div>
-
-    <!-- Next and previous buttons -->
-    <a class="model-prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="model-next" onclick="plusSlides(1)">&#10095;</a>
-
-    <!-- Thumbnail images -->
-    <div class="row">
-      <div class="demo-column">
-        <img
-          class="demo cursor"
-          src="images/image-product-1-thumbnail.jpg"
-          onclick="currentSlide(1)"
-          alt="The Woods"
-        />
+            <!-- Next and previous buttons -->
+            <a class="model-prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="model-next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <!-- Thumbnail images -->
+          <div class="row">
+            <div class="demo-column">
+              <img
+                class="demo cursor"
+                src="images/image-product-1-thumbnail.jpg"
+                onclick="currentSlide(1)"
+                alt="The Woods"
+              />
+            </div>
+            <div class="demo-column">
+              <img
+                class="demo cursor"
+                src="images/image-product-2-thumbnail.jpg"
+                onclick="currentSlide(2)"
+                alt="Cinque Terre"
+              />
+            </div>
+            <div class="demo-column">
+              <img
+                class="demo cursor"
+                src="images/image-product-3-thumbnail.jpg"
+                onclick="currentSlide(3)"
+                alt="Mountains and fjords"
+              />
+            </div>
+            <div class="demo-column">
+              <img
+                class="demo cursor"
+                src="images/image-product-4-thumbnail.jpg"
+                onclick="currentSlide(4)"
+                alt="Northern Lights"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="demo-column">
-        <img
-          class="demo cursor"
-          src="images/image-product-2-thumbnail.jpg"
-          onclick="currentSlide(2)"
-          alt="Cinque Terre"
-        />
-      </div>
-      <div class="demo-column">
-        <img
-          class="demo cursor"
-          src="images/image-product-3-thumbnail.jpg"
-          onclick="currentSlide(3)"
-          alt="Mountains and fjords"
-        />
-      </div>
-      <div class="demo-column">
-        <img
-          class="demo cursor"
-          src="images/image-product-4-thumbnail.jpg"
-          onclick="currentSlide(4)"
-          alt="Northern Lights"
-        />
-      </div>
-    </div>
-  </div>
-
-</div>
     </div>
     <script src="script.js"></script>
   </body>
