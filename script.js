@@ -1,3 +1,12 @@
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+/*
 function responsiveMenu() {
   var x = document.getElementById("myTopnav");
   let right = document.getElementById("nav-right");
@@ -7,6 +16,7 @@ function responsiveMenu() {
     x.className = "topnav";
   }
 }
+*/
 
 let slideIndex = 1;
 showSlides(slideIndex);
