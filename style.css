@@ -620,6 +620,7 @@ color: hsl(26, 100%, 55%);
     font-size: 24px;
     font-weight: 900;
   }
+
   .count-cart-container{
     display: flex;
     flex-direction: column;
@@ -628,24 +629,24 @@ color: hsl(26, 100%, 55%);
     background-color: hsl(223, 64%, 98%);
     border-radius: 0.5em;
     height: 35px;
-    width: 22em;
+    width: 20em;
     padding: 5px 0 10px 0;
-    margin: 5% 2% 0 0;
+    margin: 5% 0 0 4%;
   }
 
   .count {
     font-size: 16px;
     font-weight: 900;
-    padding: 0 130px 0 130px;
+    padding: 0 130px 0 100px;
   }
 
   .add-cart {
-    margin-top: 5%;
+    margin: 5% 0 0 4%;
     background-color: hsl(26, 100%, 55%);
     color: hsl(0, 0%, 100%);
     border: none;
     border-radius: 0.5em;
-    width: 32em;
+    width: 29em;
     height: 45px;
     font-weight: 600;
     font-size: 11px;
