@@ -87,14 +87,23 @@ function createCartElement (){
     console.log(ePrice, dPrice, count);
   }
 
-  function addListAfterClick() {
-  let i = 1;
-  if (i = 1) {
+
+function addListAfterClick() {
+let i = 0;
+for (i; i < 1; i++) {
+  if (i >= 2) {
+    return false;
+  }
+  else if(i < 2){
     createCartElement();
+    i++;
+    i++;
   }
   else{
     console.log("error");
   }
+  console.log(i);
+}
 
 }
 
