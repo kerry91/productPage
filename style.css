@@ -42,6 +42,7 @@ h2 {
   font-weight: 900;
 }
 
+
 .o-price {
   font-size: 11px;
   color: hsl(220, 14%, 75%);
@@ -51,6 +52,7 @@ h2 {
 }
 
 .discount {
+  width:35px;
   color: hsl(26, 100%, 55%);
   font-size: 11px;
   font-weight: 600;
@@ -218,8 +220,8 @@ a.navbar-item:hover,
 /* Modal Content */
 .modal-content {
   position: absolute;
-  top: 10%;
-  left: 30%;
+  top: 25%;
+  left: 35%;
   background-color: transparent;
   margin: auto;
   padding: 20px;
@@ -236,6 +238,7 @@ a.navbar-item:hover,
   right: 40%;
   font-size: 28px;
   font-weight: bold;
+  z-index: 30;
 }
 
 .close:hover,
@@ -307,6 +310,38 @@ a.navbar-item:hover,
   width: 60%;
 }
 
+.box {
+  float: right;
+  height: 5px;
+  width: 5px;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  color: hsl(220, 14%, 75%);
+  display: block;
+  padding: 1.25rem;
+}
+
+.cartText{
+  font-size: 12px;
+  float:left;
+}
+
+.cartCheckout{
+  visibility: hidden;
+  margin: 15% 0 0 -16.5%;
+  background-color: hsl(26, 100%, 55%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 0.5em;
+  width: 80%;
+  height: 40px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+
 /* Clear floats after the columns */
 
 /* Style the links inside the navigation bar */
@@ -353,7 +388,7 @@ a.navbar-item:hover,
 }
 
 .dropdown-content {
-  height: 150px;
+  height: 230px;
   width: 250px;
   padding: 1%;
 }
@@ -422,7 +457,11 @@ a.navbar-item:hover,
 }
 
 .fa-xmark{
-  color: black;
+  color: white;
+}
+
+.fa-xmark:hover{
+color: hsl(26, 100%, 55%);
 }
 
 
@@ -453,7 +492,7 @@ a.navbar-item:hover,
     visibility: hidden;
   }
   .right {
-    margin: 0 0 0 5%;
+    margin: 0 0 0 3%;
     width: 100%;
   }
   .left{
@@ -548,6 +587,7 @@ a.navbar-item:hover,
     font-size: 25px;
   }
 
+
   .o-price {
     font-size: 16px;
     color: hsl(220, 14%, 75%);
@@ -557,6 +597,7 @@ a.navbar-item:hover,
   }
 
   .discount {
+    width:35px;
     color: hsl(26, 100%, 55%);
     font-size: 20px;
     font-weight: 700;
@@ -576,7 +617,7 @@ a.navbar-item:hover,
   .fa-minus,
   .fa-plus {
     color: hsl(26, 100%, 55%);
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 900;
   }
   .count-cart-container{
@@ -635,4 +676,17 @@ a.navbar-item:hover,
   .cart-title {
     font-weight: 600;
   }
+  .cartCheckout{
+    visibility: hidden;
+    margin: 15% 0 0 -6.5%;
+    background-color: hsl(26, 100%, 55%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 0.5em;
+    width: 80%;
+    height: 45px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
 }

@@ -30,7 +30,7 @@
 
           <div class="nav-column nav-left">
             <a href="javascript:void(0);" class="icon" onclick="openNav()">
-              <i class="fa fa-bars"></i>
+              <i class="fa fa-bars fa-xl"></i>
             </a>
             <a id="brand" href="#home" class="active">
               <img class="logo" src="images/logo.svg" width="112" height="28" />
@@ -67,7 +67,13 @@
                   </div>
                   <hr class="dropdown-divider" />
                   <div class="cart-content">
-                    <p>Your cart is empty</p>
+                    <p id="emptyCartTxt">Your cart is empty</p>
+                    <div class="list">
+                      <ul>
+
+                      </ul>
+                    </div>
+                    <button class="cartCheckout" id="cartCheckout">Checkout</button>
                   </div>
                 </div>
               </div>
@@ -170,7 +176,11 @@
             Featuring a durable rubber outer sole, they’ll withstand everything
             the weather can offer.
           </p>
-          <span class="price-container"><span class="d-price">$125.00<span class="discount">50%</span></span><span class="o-price">$250.00</span></span>
+          <span class="price-container">
+            <span class="d-price" id="d-price">$125.00</span>
+            <span class="discount" id="percent">50%</span>
+            <span class="o-price">$250.00</span>
+          </span>
 <br/>
 
           <span class="count-cart-container">
@@ -181,7 +191,7 @@
               <button class="plus" id="plus">
                 <i class="fa-solid fa-plus"></i></button>
               </span>
-            <button class="add-cart">
+            <button class="add-cart" id="add2cart">
               <img
                 class="btn-cart"
                 src="images/icon-cart.svg"
